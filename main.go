@@ -13,6 +13,14 @@ func main() {
 
 	mystructs.UnmarshallExample(mystructs.MarshallExample)
 
+	ch := make(chan int)
+	// Go routine doing something.
+	go func() {
+		ch <- sum.Sum([]int{1, 2}...)
+	}()
+
+	fmt.Printf("Output from ch: %v\n", <-ch)
+
 	// Factorial
 	fmt.Println(factorial.Factorial(3))
 	fmt.Println(factorial.LoopFact(3))
