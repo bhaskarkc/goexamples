@@ -12,7 +12,6 @@ func main() {
 	mystructs.Methodset()
 
 	mystructs.UnmarshallExample(mystructs.MarshallExample)
-	return
 
 	// Factorial
 	fmt.Println(factorial.Factorial(3))
